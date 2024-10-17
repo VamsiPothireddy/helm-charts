@@ -4,7 +4,7 @@ replicaCount: 2  # Number of pod replicas
 
 image:
   repository: vamsipothireddy/hello-service  # Docker image repository
-  tag: latest  # Docker image tag (version)
+  tag: "11384106356"
   pullPolicy: IfNotPresent  # Image pull policy
 
 service:
