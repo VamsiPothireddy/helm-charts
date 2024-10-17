@@ -1,0 +1,15 @@
+appName: node-service-logger1  # Generalized application name, changeable for other apps
+
+replicaCount: 2  # Number of pod replicas
+
+image:
+  repository: vamsipothireddy/hello-service  # Docker image repository
+  tag: latest  # Docker image tag (version)
+  pullPolicy: IfNotPresent  # Image pull policy
+
+service:
+  type: LoadBalancer  # Service type (LoadBalancer, ClusterIP, NodePort)
+  port: 80  # Cluster-wide service port
+  targetPort: 3000  # Port the container listens on
+  nodePort: 30008  # Node port if type is NodePort or LoadBalancer
+

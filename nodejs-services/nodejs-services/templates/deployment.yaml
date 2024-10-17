@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName }}-deployment  # Generalized name based on appName from values.yaml
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}  # Use appName from values.yaml
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}  # Use appName from values.yaml
+    spec:
+      containers:
+      - name: {{ .Values.appName }}  # Use appName from values.yaml
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        ports:
+        - containerPort: {{ .Values.service.targetPort }}
