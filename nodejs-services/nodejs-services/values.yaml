@@ -1,10 +1,10 @@
-appName: node-service-logger1  # Generalized application name, changeable for other apps
+appName: hello-service
 
-replicaCount: 2  # Number of pod replicas
+replicaCount: 2
 
 image:
-  repository: vamsipothireddy/hello-service  # Docker image repository
-  tag: "11384106356"
+  repository: vamsipothireddy/hello-service
+  tag: "11390384184"
   pullPolicy: IfNotPresent  # Image pull policy
 
 service:
