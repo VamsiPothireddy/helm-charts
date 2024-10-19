@@ -8,7 +8,7 @@ image:
   pullPolicy: IfNotPresent  # Image pull policy
 
 service:
-  type: LoadBalancer  # Service type (LoadBalancer, ClusterIP, NodePort)
+  type: NodePort  # Service type (LoadBalancer, ClusterIP, NodePort)
   port: 80  # Cluster-wide service port
   targetPort: 3000  # Port the container listens on
   nodePort: 30008  # Node port if type is NodePort or LoadBalancer
