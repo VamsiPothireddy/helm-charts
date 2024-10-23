@@ -4,7 +4,7 @@ replicaCount: 2
 
 image:
   repository: vamsipothireddy/hello-service
-  tag: "11418962436"
+  tag: "11489772753"
   pullPolicy: IfNotPresent  # Image pull policy
 
 service:
